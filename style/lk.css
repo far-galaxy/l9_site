@@ -1,0 +1,73 @@
+body
+{
+	--br: 10px;
+}
+
+header
+{
+	background-color: aquamarine;
+	border-radius: var(--br);
+	padding: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+header h2
+{
+	margin: 5px;
+}
+
+nav
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+}
+
+nav a
+{
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	flex-wrap: nowrap;
+	background-color: aqua;
+	border-radius: var(--br);
+	
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+nav a:hover
+{
+	background-color: crimson;
+}
+
+nav p
+{
+	text-transform: uppercase;	
+	color: black;
+	margin: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+nav img
+{
+	width: 2rem;
+}
+
+div.canvas
+{
+	background-color: aquamarine;
+	border-radius: var(--br);
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
