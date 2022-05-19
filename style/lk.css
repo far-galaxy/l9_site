@@ -5,6 +5,12 @@ html
 body
 {
 	--br: 10px;	
+	background: #dc14bd;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url('/media/bg.png');
 }
 
 header
@@ -15,9 +21,9 @@ header
 	"p avatar";
 	align-items: center;
 	justify-content: space-between;
-	background-color: aquamarine;
+	background-color: #60D48B;
 	border-radius: var(--br);
-	padding: 10px;
+	padding: 15px;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -86,7 +92,7 @@ nav img
 
 div.canvas
 {
-	background-color: aquamarine;
+	background-color: #60D48B;
 	border-radius: var(--br);
 	padding: 10px;
 	margin-top: 10px;
