@@ -30,7 +30,10 @@ def get():
         
     if scrapper.login(login, password):
         chats = scrapper.method("chats", {"isArchive":0})
-        return chats
+        response = app.response_class(
+                response=json.dumps(chats),
+                mimetype='application/json')        
+        return response
     
 
 app.run(host="localhost", port=5000)
