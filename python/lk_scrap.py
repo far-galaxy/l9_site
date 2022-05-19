@@ -5,6 +5,9 @@ from bs4 import BeautifulSoup
 class LoginError(Exception):
     pass
 
+class APIError(Exception):
+    pass
+
 class Scrapper(object):
     def __init__(self):
         
@@ -45,6 +48,15 @@ class Scrapper(object):
         else:
             return False
         
+    def method(self, method, params):
+        
+        resp = self.session.get(f"https://cabinet.ssau.ru/api/{method}", headers = self.headers, params = params)
+        
+        if resp.status_code == 200:
+            return resp.json()
+        else:
+            raise APIError(resp.status_code)
+        
 if __name__ == "__main__":
     scrap = Scrapper()
     
@@ -54,6 +66,11 @@ if __name__ == "__main__":
     try:
         if scrap.login(login, password):
             print("Login succesful")
+            chats = scrap.method("chats", {"isArchive":0})
+            print([i["id"] for i in chats])
+            first_id = chats[0]["id"]
+            chat = scrap.method(f"chats/{first_id}", {"limit":100, "offset":0})
+            print([i["text"] for i in chat])
         else:
             print("Some error")
     except LoginError as e:
