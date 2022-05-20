@@ -5,6 +5,7 @@ html
 body
 {
 	--br: 10px;	
+	--d_m: 10px;
 	background: #dc14bd;
 	background-size: cover;
 	background-position: center;
@@ -62,7 +63,7 @@ nav a
 	border-radius: var(--br);
 	
 	padding: 10px;
-	margin-top: 10px;
+	margin-top: var(--d_m);
 	margin-bottom: 0px;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -81,8 +82,8 @@ nav p
 	text-transform: uppercase;	
 	color: black;
 	margin: 0;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: var(--d_m);
+	margin-right: var(--d_m);
 }
 
 nav img
@@ -90,12 +91,13 @@ nav img
 	width: 2rem;
 }
 
-#canvas div
+#canvas 
 {
+	display: flex;
 	background-color: #60D48B;
 	border-radius: var(--br);
 	padding: 10px;
-	margin-top: 10px;
+	margin-top: var(--d_m);
 	margin-left: 5px;
 	margin-right: 5px;
 }

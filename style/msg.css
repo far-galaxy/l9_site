@@ -1,0 +1,62 @@
+.chats div
+{
+	background-color: aliceblue;
+	border-radius: var(--br);
+	width: 17rem;
+	padding: var(--d_m);
+	transition: all 0.3s ease;
+}
+.chats div:not(:first-child)
+{
+	margin-top: var(--d_m);
+}
+.chats div:hover
+{
+	background-color: crimson;
+	cursor: pointer;
+}
+.chats h3
+{
+	margin: 0px;
+	font-size: 1rem;
+}
+.chats p
+{
+	margin-top: .5rem;
+	margin-bottom: 0px;
+	font-size: 1rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.chat_window
+{
+	display: flex;
+	flex-direction: column;
+	background-color: aliceblue;
+	border-radius: var(--br);
+	flex-grow: 1;
+	margin-left: var(--d_m);
+	padding: var(--d_m);
+}
+.msg
+{
+	flex-grow: 0;
+	background-color: aqua;
+	border-radius: var(--br);
+	padding: var(--d_m);	
+}
+.chat_window div:not(:first-child)
+{
+	margin-top: var(--d_m);
+}
+.msg h3
+{
+	margin: 0px;
+	font-size: 1rem;
+}
+.msg p
+{
+	margin: 0px;
+	font-size: 1rem;
+}
