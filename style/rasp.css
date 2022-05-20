@@ -1,0 +1,27 @@
+.rasp
+{
+	display: grid;	
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: var(--d_m);
+	
+}
+.rasp div
+{
+	background-color: aliceblue;
+	border-radius: var(--br);
+	padding: var(--d_m);
+	text-align: center;
+}
+div.head
+{
+	background-color: aqua;
+}
+div.pract
+{
+	background-color: hsl(348, 100%, 86%)
+}
+div.lab
+{
+	background-color: hsl(240, 100%, 86%)
+}

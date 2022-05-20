@@ -4,7 +4,8 @@ html
 }
 body
 {
-	--br: 10px;	
+	--br: 10px;
+	--d_m:10px;
 	background: #dc14bd;
 	background-size: cover;
 	background-position: center;
@@ -90,7 +91,7 @@ nav img
 	width: 2rem;
 }
 
-#canvas div
+#canvas
 {
 	background-color: #60D48B;
 	border-radius: var(--br);
