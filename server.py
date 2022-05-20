@@ -6,8 +6,12 @@ app = Flask(__name__)
 scrapper = Scrapper()
 
 @app.route('/')
-def hello_world():
-    return "hello"
+def index():
+    return send_file("index.html")
+
+@app.route('/lk')
+def lk():
+    return send_file("lk.html")
 
 @app.route('/<path:path>')
 def get_files(path):
@@ -24,6 +28,9 @@ def get_files(path):
 @app.route('/msg', methods=['GET'])
 def get():
     
+    if request.headers['Accept'].find("text/html") != -1:
+        return send_file("lk.html")
+
     path = os.path.abspath("python/login.txt")
     with open(path, "r", encoding="utf-8") as f:
         login, password = f.read().split()  

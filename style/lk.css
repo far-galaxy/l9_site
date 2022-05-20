@@ -90,7 +90,7 @@ nav img
 	width: 2rem;
 }
 
-div.canvas
+#canvas div
 {
 	background-color: #60D48B;
 	border-radius: var(--br);
