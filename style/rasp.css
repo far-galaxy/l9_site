@@ -1,0 +1,150 @@
+.note
+{
+	display: flex;
+	justify-content: space-evenly;
+	font-family: var(--font);
+}
+.note div
+{
+	background-color: var(--main_color);
+	border-radius: var(--br);
+	padding: var(--d_m);
+	text-align: center;
+	margin: var(--d_m);
+	margin-left: 0; 
+	margin-right: 0;
+	transition: all 0.3s ease;
+}
+.note div:not(#week):hover
+{
+	background-color: var(--selc_color);
+	cursor: pointer;
+}
+div#week 
+{
+	flex-grow: 1; 
+	margin-left: var(--d_m); 
+	margin-right: var(--d_m)
+}
+.rasp
+{
+	display: grid;	
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: var(--d_m);
+}
+.rasp div
+{
+	background-color: var(--main_color);
+	border-radius: var(--br);
+	padding: var(--d_m);
+	text-align: center;
+	transition: all 0.3s ease;
+}
+div.subj:not(.time, .head):hover
+{
+	cursor: pointer;
+	background-color: var(--selc_color);
+}
+div.head
+{
+	background-color: var(--head_color);
+	font-family: var(--font);
+}
+div.time 
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-family: var(--font);
+}
+hr
+{
+	margin:0;
+}
+div.subj 
+{
+	display: flex;
+	flex-direction: column;
+}
+div.subj:not(.lab, .lect, .pract, .other)
+{
+	background-color: var(--inac_color);
+}
+.subj div
+{
+	border-radius: var(--br);
+	padding: calc(var(--d_m)/2);
+}
+.subj div #text
+{
+	display: none;
+}
+.subj p
+{
+	margin: 0;
+	display: none;
+	font-family: var(--font);
+	font-size: 0.85rem;
+	color: aliceblue;
+}
+.subj h2
+{
+	font-family: var(--font);
+	font-size: 0.85rem;
+	margin-left: var(--d_m);
+	margin: calc(var(--d_m)/2);
+	text-align: left;
+}
+.subj h3
+{
+	font-family: var(--font);
+	font-size: 0.65rem;
+	text-align: left;
+	margin: calc(var(--d_m)/2);
+}
+.subj h5
+{
+	font-family: var(--font);
+	font-size: 0.7rem;
+	text-align: left;
+	font-weight: normal;
+	margin: calc(var(--d_m)/2);
+}
+.lect div
+{
+	background-color: chartreuse;
+}
+.pract div
+{
+	background-color: crimson;
+}
+.lab div
+{
+	background-color: blueviolet;
+}
+#prep
+{
+	display: none;
+}
+button
+{
+	display: flex;
+	align-items: center;
+	border-radius: var(--br);
+	text-align: left;
+	text-decoration: underline;
+	padding: calc(var(--d_m)/2);
+	margin-top: calc(var(--d_m)/2);
+	border-style: hidden;
+	background-color: blanchedalmond;
+	overflow: hidden;
+}
+button:hover
+{
+	background-color: var(--selc_color);
+}
+button img
+{
+	margin-right: calc(var(--d_m)/2);
+}
