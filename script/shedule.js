@@ -8,6 +8,7 @@ const cleanContainer = () =>
 window.onload = fetch("shedule.json")
 	.then(response => response.json())
 	.then(json => {
+	$("#week").append(`${json.week} неделя`)
 	makeShedule(json.shedule);
 });
 
@@ -24,9 +25,23 @@ const makeShedule = (shedule) =>
 			<div class="head">пт</div>
 			<div class="head">сб</div>`);
 
-	sheduleContainer.append('<div class="time">08:00<hr>09:35</div>');
+	shedule.map((week) => buildWeek(week)).forEach(node => sheduleContainer.append(node));
+}
 
-	shedule.map(data => buildCard(data)).forEach(node => sheduleContainer.append(node));
+const buildWeek = (week) =>
+{
+	return week.map((data, ind) => {
+		console.log(data);
+		if (ind===0)
+		{
+			return `<div class="time">${data.begin}<hr>${data.end}</div>`;
+		}
+		else
+		{
+			return buildCard(data);
+		}
+	})
+	
 }
 
 const buildCard = (data) => 
