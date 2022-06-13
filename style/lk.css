@@ -1,3 +1,13 @@
+:root
+{
+	--head_color: aqua;
+	--main_color: aliceblue;
+	--selc_color: aqua;
+	--text_color: black;
+	--inac_color: darkgrey;
+	--font: monospace;
+}
+
 html
 {
 	font-size: 1.3rem;
